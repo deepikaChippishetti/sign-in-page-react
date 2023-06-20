@@ -1,23 +1,35 @@
 import "./App.css";
-import Details from "./Details";
-import { Action } from "./data";
-const button = {
-  cancel: "Cancel",
-  create: "Create User",
-};
+import { Button } from "./Button";
+// import SignInForm from "./Details";
+import { Header } from "./Header";
+import InputForm from "./InputForm";
+
 export default function App() {
   return (
-    <div id="sign-in-page" data-testid="div">
-      <h1>Sign-in user</h1>
-      <p>Please fill the below details</p>
-      <>
-        <Details />
-        <br></br>
-        <div id="action">
-          <Action btn={button.cancel} />
-          <Action btn={button.create}/>
-        </div>
-      </>
-    </div>
+    <>
+      <Header />
+      <InputForm
+        type={"text"}
+        placeholder={"Enter first name"}
+        label={"First Name"}
+      />
+      <InputForm
+        type={"text"}
+        placeholder={"Enter last name"}
+        label={"Last Name"}
+      />
+      <br />
+      <br />
+      <InputForm
+        type={"email"}
+        placeholder={"e.g jhon.smith@org.name"}
+        label={"Email"}
+      />
+      <InputForm type={"tel"} placeholder={"+91"} label={"Phone Number"} />
+      <div id="button">
+        <Button name={"Cancel"} />
+        <Button name={"Create User"} />
+      </div>
+    </>
   );
 }
