@@ -1,10 +1,11 @@
-.sign-in-page {
+#sign-in-page {
   text-align: center;
 }
 
-#action{
+#button{
 text-align: center;
-margin: 20px;
+width: 400px;
+height: 200px;
 }
 
 
