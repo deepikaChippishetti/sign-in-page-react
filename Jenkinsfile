@@ -9,7 +9,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Build') {
+        stage('Build the APP') {
             steps {
                 sh 'npm start'
             }
